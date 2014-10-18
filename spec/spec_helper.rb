@@ -23,6 +23,7 @@ require 'kuma'
 # Requires supporting files with custom matchers and macros, etc,
 # in ./support/ and its subdirectories.
 Dir["#{File.dirname(__FILE__)}/support/**/*.rb"].each {|f| require f}
+Dir.glob(::File.expand_path('../support/*.rb', __FILE__)).each { |f| require_relative f }
 
 RSpec.configure do |config|
 

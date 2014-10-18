@@ -12,4 +12,10 @@ describe "Kuma" do
     Kuma.smell testIO
     testIO.string.should include('# flog')
   end
+  
+  it ".smell should run rubocop" do
+    testIO = StringIO.new
+    Kuma.smell testIO
+    testIO.string.should include('# rubocop')
+  end
 end

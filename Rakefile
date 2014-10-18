@@ -21,6 +21,7 @@ Jeweler::Tasks.new do |gem|
   gem.description = %Q{Kuma is a collection of gems that helps detecting code smells.}
   gem.email = "dunyakirkali@gmail.com"
   gem.authors = ["Dunya Kirkali"]
+  gem.executables   = ["kuma"]
   # dependencies defined in Gemfile
 end
 Jeweler::RubygemsDotOrgTasks.new
