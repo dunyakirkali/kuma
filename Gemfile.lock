@@ -107,7 +107,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  aruba
+  aruba (~> 0, >= 0)
   bundler (~> 1.0, >= 1.0)
   flay (~> 2.5, >= 2.5.0)
   flog (~> 4.3, >= 4.3.0)
@@ -115,4 +115,4 @@ DEPENDENCIES
   rdoc (~> 3.12, >= 3.12)
   rspec (~> 2.8, >= 2.8.0)
   rubocop (~> 0.26.1, >= 0.26.1)
-  simplecov
+  simplecov (~> 0, >= 0)
