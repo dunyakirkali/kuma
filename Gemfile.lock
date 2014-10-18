@@ -108,11 +108,11 @@ PLATFORMS
 
 DEPENDENCIES
   aruba
-  bundler (~> 1.0)
-  flay
-  flog
-  jeweler (~> 2.0.1)
-  rdoc (~> 3.12)
-  rspec (~> 2.8.0)
-  rubocop
+  bundler (~> 1.0, >= 1.0)
+  flay (~> 2.5, >= 2.5.0)
+  flog (~> 4.3, >= 4.3.0)
+  jeweler (~> 2.0, >= 2.0.1)
+  rdoc (~> 3.12, >= 3.12)
+  rspec (~> 2.8, >= 2.8.0)
+  rubocop (~> 0.26.1, >= 0.26.1)
   simplecov
