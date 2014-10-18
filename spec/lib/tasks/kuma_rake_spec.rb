@@ -2,15 +2,13 @@
 describe "kuma:smell" do
   include_context "rake"
 
-  its(:prerequisites) { should include("environment") }
-
-  xit "generates flay report" do
+  it "generates flay report" do
     io = StringIO.new
-    subject.invoke
+    subject.invoke io
     io.string.should include('# flay')
   end
   
-  xit "generates flog report" do
+  it "generates flog report" do
     io = StringIO.new
     subject.invoke io
     io.string.should include('# flog')

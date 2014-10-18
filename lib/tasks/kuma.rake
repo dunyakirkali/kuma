@@ -1,6 +1,6 @@
 namespace :kuma do
   desc "Smells"
-  task smell: :environment do
+  task :smell, :io do |t, args|
     Kuma.smell args[:io]
   end
 end
