@@ -14,11 +14,12 @@ end
 ENV['COVERAGE'] && SimpleCov.start do
   add_filter '/.rvm/'
 end
+
 $LOAD_PATH.unshift(File.join(File.dirname(__FILE__), '..', 'lib'))
 $LOAD_PATH.unshift(File.dirname(__FILE__))
-
 require 'rspec'
 require 'kuma'
+require 'kuma/cli'
 
 # Requires supporting files with custom matchers and macros, etc,
 # in ./support/ and its subdirectories.
@@ -26,5 +27,15 @@ Dir["#{File.dirname(__FILE__)}/support/**/*.rb"].each {|f| require f}
 Dir.glob(::File.expand_path('../support/*.rb', __FILE__)).each { |f| require_relative f }
 
 RSpec.configure do |config|
+  config.filter_run :focus
+  config.run_all_when_everything_filtered = true
+  config.order = :random
 
+  config.expect_with :rspec do |c|
+    c.syntax = :expect # disables `should`
+  end
+
+  config.mock_with :rspec do |c|
+    c.syntax = :expect # disables `should_receive` and `stub`
+  end
 end

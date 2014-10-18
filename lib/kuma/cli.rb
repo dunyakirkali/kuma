@@ -36,21 +36,17 @@ module Kuma
 
     def act_on_options
       handle_exiting_options
-
       # ConfigLoader.debug = @options[:debug]
       # ConfigLoader.auto_gen_config = @options[:auto_gen_config]
-      #
-      # @config_store.options_config = @options[:config] if @options[:config]
-      #
-      # Rainbow.enabled = false unless @options[:color]
+      @config_store.options_config = @options[:config] if @options[:config]
     end
 
     def handle_exiting_options
-      # return unless Options::EXITING_OPTIONS.any? { |o| @options.key? o }
-      #
-      # puts RuboCop::Version.version(false) if @options[:version]
-      # puts RuboCop::Version.version(true) if @options[:verbose_version]
-      # exit(0)
+      return unless Options::EXITING_OPTIONS.any? { |o| @options.key? o }
+      
+      puts RuboCop::Version.version(false) if @options[:version]
+      puts RuboCop::Version.version(true) if @options[:verbose_version]
+      exit(0)
     end
 
     def display_error_summary(errors)
