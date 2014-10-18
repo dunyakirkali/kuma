@@ -17,8 +17,8 @@ Jeweler::Tasks.new do |gem|
   gem.name = "kuma"
   gem.homepage = "http://github.com/dunyakirkali/kuma"
   gem.license = "MIT"
-  gem.summary = %Q{With}
-  gem.description = %Q{TODO: longer description of your gem}
+  gem.summary = %Q{With it's sharp sense of smell, kuma can detect the faintest of code smells.}
+  gem.description = %Q{Kuma is a collection of gems that helps detecting code smells.}
   gem.email = "dunyakirkali@gmail.com"
   gem.authors = ["Dunya Kirkali"]
   # dependencies defined in Gemfile

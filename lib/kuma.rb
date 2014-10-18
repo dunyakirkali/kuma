@@ -16,4 +16,8 @@ class Kuma
     io.write('# flog')
     io.write(%x(flog app))
   end
+  
+  def self.root
+    File.dirname __dir__
+  end
 end
