@@ -1,16 +1,3 @@
 #!/usr/bin/env ruby
-
-$LOAD_PATH.unshift(File.dirname(File.realpath(__FILE__)) + '/../lib')
-
-require 'kuma'
-require 'benchmark'
-
-cli = Kuma::CLI.new
-result = 0
-
-time = Benchmark.realtime do
-  result = cli.run
-end
-
-puts "Finished in #{time} seconds" if cli.options[:debug]
-exit result
+require 'kuma/cli'
+Logbook::CLI.start

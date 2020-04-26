@@ -1,5 +1,6 @@
 source "http://rubygems.org"
 
+gem 'thor'
 gem 'flay', '~> 2.5', '>= 2.5.0', require: false
 gem 'flog', '~> 4.3', '>= 4.3.0', require: false
 gem 'rubocop', '~> 0.26.1', '>= 0.26.1', require: false
